@@ -1,0 +1,55 @@
+###
+GET http://127.0.0.1:8000/Questions/
+Accept: application/json
+
+
+### Create Question
+POST http://127.0.0.1:8000/Questions/
+Content-Type: application/json
+
+{
+    "Question": "What is Python?",
+    "option_a": "Programming Language ",
+    "option_b": "Operating System",
+    "option_c": "Database",
+    "option_d": "Web Browser",
+    "correct_answer": "Programming Language"
+}
+
+
+###
+GET  http://127.0.0.1:8000/Questions/1/
+Accept:  application/json
+
+
+###
+POST http://127.0.0.1:8000/Questions/
+Content-Type: application/json
+
+{
+    "Question": "Which keyword is used to define a function in Python?",
+    "option_a": "function",
+    "option_b": "def",
+    "option_c": "fun",
+    "option_d": "define",
+    "correct_answer": "def"
+}
+
+###
+DELETE   http://127.0.0.1:8000/Questions/
+
+
+###
+GET http://127.0.0.1:8000/submission/
+Accept: application/json
+
+###
+POST  http://127.0.0.1:8000/submission/
+Content-Type:  application/json
+
+{
+    "student_name": "Adhish",
+    "Question_id": 1,
+    "Selected_answer": "Python is a programming language."
+}
+
